@@ -59,13 +59,22 @@ public class Menu {
         }while(opcio != 0);
     }
 
-
+    /**
+     * Funcio per agregar aleatoriament numeros a l'array
+     * @param vector Array on omplirem amb numeros aleatoris
+     * @param n Integer de llargada de l'array
+     */
     public static void crearVector(int []vector,int n){
         for (int i = 0; i < n; i++) { //omplim vector
             vector[i] = (int)Math.floor(Math.random()*10);
             System.out.print(vector[i]);
         }
     }
+
+    /**
+     * Funcio per veure si hi ha parells senars
+     * @param matriu Array bidimensional on hi han els numeros
+     */
     public static void parellsoSenars(int [][]matriu){
         //ToDo: aquesta funció ha de retornar el total de números parells o senars segons qui guanyi
         int parell=0,senar=0;
@@ -88,6 +97,12 @@ public class Menu {
         }
         else System.out.println("empat!");
     }
+
+    /**
+     * Funció pero verificar si hi ha un numero parell dintrel de l'array de vector
+     * @param vector Array on es troben els numeros
+     * @return retorna true indiferent
+     */
     public static boolean hihaParells(int [] vector){
         int i=0;
         while ((vector[i]%2 != 0) && (i <= vector.length)){  //v.length ens diu la longitud del vector
@@ -99,6 +114,11 @@ public class Menu {
         else System.out.println("no s'ha trobat cap número parell");
         return true;
     }
+
+    /**
+     *
+     * @param vector
+     */
     public static void mostrarContingut(int [] vector){
         //PENDENT: aquesta funció està condicionada a l'execució d'alguna  de les funcions anteriors
         int i=0;
